@@ -4,5 +4,5 @@ export const parseArray = <T>(
   input: string[],
   options: { parser: Parser<T> }
 ) => {
-  return options.parser ? input.map(options.parser) : input;
+  return input.map(options.parser);
 };
