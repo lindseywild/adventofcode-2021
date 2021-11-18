@@ -1,0 +1,39 @@
+{
+  "root": "apps/warmup-1",
+  "sourceRoot": "apps/warmup-1/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/warmup-1",
+        "main": "apps/warmup-1/src/main.ts",
+        "tsConfig": "apps/warmup-1/tsconfig.app.json",
+        "assets": ["apps/warmup-1/src/assets"]
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:execute",
+      "options": {
+        "buildTarget": "warmup-1:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/warmup-1/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/warmup-1"],
+      "options": {
+        "jestConfig": "apps/warmup-1/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
