@@ -1,6 +1,6 @@
 {
   "version": 2,
   "projects": {
-    "io": "libs/io"
+    "util-io": "libs/util-io"
   }
 }

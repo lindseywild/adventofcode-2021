@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@adventofcode-2021/io": ["libs/io/src/index.ts"]
+      "@adventofcode-2021/util-io": ["libs/util-io/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

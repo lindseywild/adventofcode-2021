@@ -1,20 +1,20 @@
 {
-  "root": "libs/io",
-  "sourceRoot": "libs/io/src",
+  "root": "libs/util-io",
+  "sourceRoot": "libs/util-io/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/io/**/*.ts"]
+        "lintFilePatterns": ["libs/util-io/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/io"],
+      "outputs": ["coverage/libs/util-io"],
       "options": {
-        "jestConfig": "libs/io/jest.config.js",
+        "jestConfig": "libs/util-io/jest.config.js",
         "passWithNoTests": true
       }
     }
