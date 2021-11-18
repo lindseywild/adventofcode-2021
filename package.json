@@ -4,8 +4,9 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
+    "build": "nx run-many --target=build --all",
+    "test": "nx run-many --target=test --all",
+    "generate": "nx workspace-generator day-generator"
   },
   "private": true,
   "dependencies": {

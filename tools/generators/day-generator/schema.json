@@ -10,7 +10,8 @@
       "$default": {
         "$source": "argv",
         "index": 0
-      }
+      },
+      "x-prompt": "What is the name of your day?"
     },
     "func": {
       "type": "string",
