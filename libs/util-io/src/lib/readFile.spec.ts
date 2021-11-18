@@ -1,4 +1,4 @@
-import { readFile } from './read-file';
+import { readFile } from './readFile';
 
 const importTextFileTxt = `12
 23

@@ -1,5 +1,5 @@
-import { parseArray, Parser } from './parse-array';
-import { readFile } from './read-file';
+import { parseArray, Parser } from './parseArray';
+import { readFile } from './readFile';
 import { Delimiter, split } from './split';
 
 type Options<T> = {

@@ -1,4 +1,4 @@
-import { parseArray } from './parse-array';
+import { parseArray } from './parseArray';
 
 test('should parse the values of the given array with the given parser function', () => {
   const result = parseArray(['1', '2', '3', '4', '5'], { parser: Number });
