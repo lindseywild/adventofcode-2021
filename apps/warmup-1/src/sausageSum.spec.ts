@@ -1,8 +1,16 @@
-import { sausageSum } from './sausage-sum';
+import { sausageSum } from './sausageSum';
 
-test('should do something cool', () => {
-  const input = [];
+test('should return the sum from the example', () => {
+  const input = [33, 49, 1, 384];
   const result = sausageSum(input);
 
-  expect(result).toEqual(null);
+  expect(result).toEqual(467);
 });
+
+test('should return the sum of 1 + 1', () => {
+  expect(sausageSum([1, 1])).toEqual(2);
+});
+
+test('should return a sum even with negatives', () => {
+  expect(sausageSum([-10, -20])).toEqual(-30);
+})
