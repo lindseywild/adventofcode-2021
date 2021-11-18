@@ -1,0 +1,8 @@
+import { <%= func %> } from './<%= funcKebab %>';
+
+test('should do something cool', () => {
+  const input = [];
+  const result = <%= func %>(input);
+
+  expect(result).toEqual(null);
+})
