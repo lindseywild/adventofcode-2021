@@ -10,6 +10,7 @@
   "private": true,
   "dependencies": {
     "@nrwl/node": "^13.1.4",
+    "change-case": "^4.1.2",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
