@@ -4,8 +4,7 @@ const importTextFileTxt = `12
 23
 43
 54
-66
-`; // <-- EOF newline
+66`;
 
 test('should import file at the given path and return the text content with the default root dir', async () => {
   const result = await readFile('/libs/util-io/src/lib/fixtures/read-file.txt');

@@ -5,5 +5,7 @@ export const readFile = (
   path: string,
   options: { root: string } = { root: process.cwd() }
 ) => {
-  return fsReadFile(join(options.root, path), { encoding: 'utf-8' });
+  return fsReadFile(join(options.root, path), { encoding: 'utf-8' }).then(
+    (data) => data.trimEnd()
+  );
 };
