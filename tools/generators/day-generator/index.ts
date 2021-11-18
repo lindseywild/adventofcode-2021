@@ -5,6 +5,7 @@ import {
   generateFiles,
   joinPathFragments,
   readProjectConfiguration,
+  updateJson,
 } from '@nrwl/devkit';
 import { applicationGenerator } from '@nrwl/node';
 import { paramCase } from 'change-case';
@@ -21,6 +22,7 @@ export default async function (tree: Tree, schema: any) {
     { name, func, tmpl: '', funcKebab: paramCase(func) } // config object to replace variable in file templates,
   );
 
+  // Remove extra files from node app generator
   tree
     .listChanges()
     .filter(({ path }) => {
@@ -29,6 +31,12 @@ export default async function (tree: Tree, schema: any) {
     .forEach(({ path }) => {
       tree.delete(path);
     });
+
+  // Update project.json
+  updateJson(tree, `apps/${name}/project.json`, (projJson) => {
+    projJson.targets.build.configurations = undefined;
+    return projJson;
+  });
 
   await formatFiles(tree);
   return () => {
