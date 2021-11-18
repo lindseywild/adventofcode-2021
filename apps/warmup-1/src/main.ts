@@ -1,5 +1,5 @@
 import { processInput } from '@adventofcode-2021/util-io';
-import { sausageSum } from './sausage-sum';
+import { sausageSum } from './sausageSum';
 
 (async () => {
   const input = await processInput('assets/input.txt', { root: __dirname });
