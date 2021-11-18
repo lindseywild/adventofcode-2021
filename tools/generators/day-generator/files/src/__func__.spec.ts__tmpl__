@@ -1,4 +1,4 @@
-import { <%= func %> } from './<%= funcKebab %>';
+import { <%= func %> } from './<%= func %>';
 
 test('should do something cool', () => {
   const input = [];

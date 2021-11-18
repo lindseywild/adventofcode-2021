@@ -8,7 +8,6 @@ import {
   updateJson,
 } from '@nrwl/devkit';
 import { applicationGenerator } from '@nrwl/node';
-import { paramCase } from 'change-case';
 
 export default async function (tree: Tree, schema: any) {
   const { name, func } = schema;
@@ -19,7 +18,7 @@ export default async function (tree: Tree, schema: any) {
     tree, // the virtual file system
     joinPathFragments(__dirname, './files'), // path to the file templates
     libraryRoot, // destination path of the files
-    { name, func, tmpl: '', funcKebab: paramCase(func) } // config object to replace variable in file templates,
+    { name, func, tmpl: '' } // config object to replace variable in file templates,
   );
 
   // Remove extra files from node app generator
