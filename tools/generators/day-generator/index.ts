@@ -18,7 +18,7 @@ export default async function (tree: Tree, schema: any) {
     tree, // the virtual file system
     joinPathFragments(__dirname, './files'), // path to the file templates
     libraryRoot, // destination path of the files
-    { name, func, tmpl: '', 'func-kebab': paramCase(func) } // config object to replace variable in file templates,
+    { name, func, tmpl: '', funcKebab: paramCase(func) } // config object to replace variable in file templates,
   );
 
   tree

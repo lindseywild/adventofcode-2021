@@ -1,0 +1,9 @@
+import { processInput } from '@adventofcode-2021/util-io';
+import { <%= func %> } from './<%= funcKebab %>';
+
+(async () => {
+  const input = processInput('input.txt', { root: __dirname });
+  const result = <%= func %>(input);
+
+  console.log(result);
+})();
