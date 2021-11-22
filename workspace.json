@@ -2,6 +2,6 @@
   "version": 2,
   "projects": {
     "util-io": "libs/util-io",
-    "warmup-1": "apps/warmup-1"
+    "warmup-day-1": "apps/warmup-day-1"
   }
 }

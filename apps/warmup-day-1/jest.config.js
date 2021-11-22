@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'warmup-1',
+  displayName: 'warmup-day-1',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +11,5 @@ module.exports = {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/apps/warmup-1',
+  coverageDirectory: '../../coverage/apps/warmup-day-1',
 };
