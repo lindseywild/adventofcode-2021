@@ -1,5 +1,5 @@
 import { processInput } from '@adventofcode-2021/util-io';
-import { sonarSweep } from './sonarSweep';
+import { sonarSweep, threeWindowSums } from './sonarSweep';
 
 (async () => {
   const input = await processInput<number>('assets/input.txt', {
@@ -7,6 +7,9 @@ import { sonarSweep } from './sonarSweep';
     parser: Number,
   });
   const result = sonarSweep(input);
+  const threeWindows = threeWindowSums(input);
+  const result2 = sonarSweep(threeWindows);
 
-  console.log(result);
+  console.log('result', result);
+  console.log('result2', result2);
 })();
