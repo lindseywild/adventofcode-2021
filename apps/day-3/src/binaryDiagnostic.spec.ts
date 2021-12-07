@@ -1,4 +1,8 @@
-import { oxygenGenRating } from './binaryDiagnostic';
+import {
+  oxygenGenRating,
+  co2ScrubberRating,
+  lifeSupportRating,
+} from './binaryDiagnostic';
 
 const input = [
   '00100',
@@ -18,5 +22,17 @@ const input = [
 test('should output oxygen generator rating', () => {
   const result = oxygenGenRating(input);
 
-  expect(result).toEqual('10111');
+  expect(result).toEqual(23);
+});
+
+test('should output co2 scrubber rating', () => {
+  const result = co2ScrubberRating(input);
+
+  expect(result).toEqual(10);
+});
+
+test('should output life support rating', () => {
+  const result = lifeSupportRating(input);
+
+  expect(result).toEqual(230);
 });
